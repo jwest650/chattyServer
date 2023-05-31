@@ -21,6 +21,9 @@ const io = new Server(httpServer, {
           methods: ["GET", "POST"],
      },
 });
+app.get("/", (req, res) => {
+     res.status(200).json({ message: "welcome to chatty api" });
+});
 app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
